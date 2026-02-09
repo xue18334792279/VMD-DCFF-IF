@@ -8,11 +8,26 @@ This repository provides the official implementation of the paper: **"Influenza 
 ## 📖 Overview
 Accurate influenza forecasting is critical for public health resource allocation. This project proposes **VMD-DCFF-IF**, a deep learning framework that handles the high nonlinearity and sparse sampling of influenza time series data.
 
-### Key Features
+### ✨ Key Features
 * **VMD Decomposition**: Decomposes non-stationary influenza sequences into multiple Intrinsic Mode Functions (IMFs) to reduce nonlinear coupling.
 * **Dual-Channel Architecture**: Parallel extraction of features using a 2D Attention-based CNN (temporal path) and a Spatio-Temporal Graph Convolutional Network (STGCN, spatial path).
 * **Deep Feature Fusion**: Employs a **BiGRU-BiLSTM** (bi-GLSTM) model to dynamically fuse multi-dimensional features for final prediction.
 * **High Accuracy**: Outperforms SOTA models like GAST, SAIFlu-Net, and MTS-LSTM on national datasets from 2013 to 2023.
+
+---
+
+## 📂 Project Structure
+```text
+VMD-DCFF-IF/
+├── data/                   # Place your influenza datasets here
+├── scripts/
+│   ├── data_split.py       # Sequence cutting and normalization
+│   ├── merge_features.py   # Merging GADF images, sequences, and graph matrices
+│   └── evaluate.py         # Performance metrics (sMAPE, MASE)
+├── models/
+│   └── main.py             # Model definition, training, and prediction
+├── requirements.txt        # Environment dependencies
+└── README.md
 
 ---
 
@@ -45,12 +60,32 @@ The dataset is sourced from the Chinese National Influenza Center (CNIC), coveri
 ---
 
 ## 🚀 Getting Started
-1. **Data Preparation**: Download the raw influenza surveillance data from the CNIC official website.
-2. **VMD Optimization**: Determine the optimal number of decomposition modes ($k$) using Permutation Entropy (the paper suggests $k=3$ for the national dataset).
-3. **Training**:
-```bash
-python train.py --batch_size 128 --learning_rate 1e-5 --loss MAE
+1. **Environment Setup**:
+```Bash
+git clone [https://github.com/YourUsername/VMD-DCFF-IF.git](https://github.com/YourUsername/VMD-DCFF-IF.git)
+cd VMD-DCFF-IF
+pip install -r requirements.txt
+2. **Data Preparation**:
+1. **Run data splitting**:
+```Bash
+python scripts/data_split.py
+2. **Merge multi-modal features**:
+```Bash
+python scripts/merge_features.py
+3. **Training & Prediction**:
+Modify the configuration in models/main.py and run:
+```Bash
+python models/train.py --batch_size 128 --learning_rate 1e-5 --loss MAE
 (Note: Key hyperparameters are configured as per Table 2 in the paper.)
+
+---
+
+## 🛠️ Requirements
+
+**Framework**: TensorFlow 2.9.0 (Keras API)
+**Dependencies**: numpy, pandas, matplotlib, scipy, vmdpy, scikit-learn, pyts, axial-attention
+
+---
 
 ## Python Dependencies
 ```bash
