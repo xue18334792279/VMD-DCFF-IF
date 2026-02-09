@@ -17,6 +17,7 @@ Accurate influenza forecasting is critical for public health resource allocation
 ---
 
 ## 📂 Project Structure
+
 ```text
 VMD-DCFF-IF/
 ├── data/                   # Place your influenza datasets here
@@ -28,7 +29,6 @@ VMD-DCFF-IF/
 │   └── main.py             # Model definition, training, and prediction
 ├── requirements.txt        # Environment dependencies
 └── README.md
-
 ---
 
 ## 🏗️ Model Architecture
