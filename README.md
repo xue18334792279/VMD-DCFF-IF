@@ -48,7 +48,8 @@ The experimental environment used in the study is as follows:
 * **CPU**: Intel i7-12700
 * **GPU**: NVIDIA RTX 3060 (12GB)
 * **Framework**: TensorFlow 2.9 (with Keras API)
-
+**Dependencies**: numpy, pandas, matplotlib, scipy, vmdpy, scikit-learn, pyts, axial-attention
+  
 ---
 
 ## 📊 Dataset
@@ -81,13 +82,6 @@ Modify the configuration in models/main.py and run:
 python models/train.py --batch_size 128 --learning_rate 1e-5 --loss MAE
 (Note: Key hyperparameters are configured as per Table 2 in the paper.)
 ```
-
----
-
-## 🛠️ Requirements
-
-**Framework**: TensorFlow 2.9.0 (Keras API)
-**Dependencies**: numpy, pandas, matplotlib, scipy, vmdpy, scikit-learn, pyts, axial-attention
 
 ---
 
