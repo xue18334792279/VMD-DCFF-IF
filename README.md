@@ -17,7 +17,7 @@ Accurate influenza forecasting is critical for public health resource allocation
 ---
 
 ## 📂 Project Structure
-```text
+
 VMD-DCFF-IF/
 ├── data/                   # Place your influenza datasets here
 ├── scripts/
