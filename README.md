@@ -67,11 +67,11 @@ cd VMD-DCFF-IF
 pip install -r requirements.txt
 ```
 2. **Data Preparation**:
-1. **Run data splitting**:
+   1. **Run data splitting**:
 ```Bash
 python scripts/data_split.py
 ```
-2. **Merge multi-modal features**:
+   2. **Merge multi-modal features**:
 ```Bash
 python scripts/merge_features.py
 ```
