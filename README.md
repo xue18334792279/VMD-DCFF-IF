@@ -62,7 +62,7 @@ The dataset is sourced from the Chinese National Influenza Center (CNIC), coveri
 ## 🚀 Getting Started
 1. **Environment Setup**:
 ```Bash
-git clone [https://github.com/YourUsername/VMD-DCFF-IF.git](https://github.com/xue18334792279/VMD-DCFF-IF.git)
+git clone (https://github.com/xue18334792279/VMD-DCFF-IF.git)
 cd VMD-DCFF-IF
 pip install -r requirements.txt
 ```
