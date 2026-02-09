@@ -65,18 +65,22 @@ The dataset is sourced from the Chinese National Influenza Center (CNIC), coveri
 git clone [https://github.com/YourUsername/VMD-DCFF-IF.git](https://github.com/YourUsername/VMD-DCFF-IF.git)
 cd VMD-DCFF-IF
 pip install -r requirements.txt
+```
 2. **Data Preparation**:
 1. **Run data splitting**:
 ```Bash
 python scripts/data_split.py
+```
 2. **Merge multi-modal features**:
 ```Bash
 python scripts/merge_features.py
+```
 3. **Training & Prediction**:
 Modify the configuration in models/main.py and run:
 ```Bash
 python models/train.py --batch_size 128 --learning_rate 1e-5 --loss MAE
 (Note: Key hyperparameters are configured as per Table 2 in the paper.)
+```
 
 ---
 
