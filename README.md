@@ -24,7 +24,7 @@ VMD-DCFF-IF/
 │   ├── data_split.py       # Sequence cutting and normalization
 │   ├── merge_features.py   # Merging GADF images, sequences, and graph matrices
 │   └── evaluate.py         # Performance metrics (sMAPE, MASE)
-├── models/
+├── model/
 │   └── main.py             # Model definition, training, and prediction
 ├── requirements.txt        # Environment dependencies
 └── README.md
